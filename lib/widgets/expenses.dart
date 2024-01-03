@@ -69,7 +69,7 @@ class _ExpensesState extends State<Expenses> {
       child: Text('No expenses found.'),
     );
 
-    if (_registeredExpenses.isEmpty) {
+    if (_registeredExpenses.isNotEmpty) {
       mainContent = ExpensesList(
         expenses: _registeredExpenses,
         onRemoveExpense: _removeExpense,
@@ -89,9 +89,7 @@ class _ExpensesState extends State<Expenses> {
       body: Column(
         children: [
           const Text('The chart'),
-          Expanded(
-            child: mainContent,
-          ),
+          Expanded(child: mainContent),
         ],
       ),
     );
