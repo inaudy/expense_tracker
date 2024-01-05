@@ -29,7 +29,7 @@ class _ExpensesState extends State<Expenses> {
   ];
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
-      constraints: const BoxConstraints(maxWidth: 850),
+      constraints: const BoxConstraints(),
       useSafeArea: true,
       isScrollControlled: true,
       context: context,
